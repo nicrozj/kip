@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import { createRouter, createWebHistory, RouterView } from "vue-router";
 import Index from "./pages/index.vue";
-import Polygon from "./pages/Polygon.vue";
+import Polygon from "./pages/polygon.vue";
 
 import "./main.css";
 
