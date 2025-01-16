@@ -16,19 +16,16 @@ import UPage from '@/components/UPage.vue';
       </div>
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-full max-w-[1000px] px-5">
         <div class="flex flex-col gap-2 w-full">
-          <h1 class="text-xl">Лабораторные работы</h1>
-          <LinkButton href="/laboratory_work/1">
-            Лабораторная работа 1
+          <LinkButton href="/polygon">
+            Полигон
           </LinkButton>
         </div>
         <div class="flex flex-col gap-2 w-full">
-          <h1 class="text-xl">Доработки</h1>
           <LinkButton href="/">
             ---
           </LinkButton>
         </div>
         <div class="flex flex-col gap-2 w-full">
-          <h1 class="text-xl">Учебная практика</h1>
           <LinkButton href="/">
             ---
           </LinkButton>

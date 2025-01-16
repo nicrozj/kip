@@ -1,5 +1,5 @@
 <template>
-    <table class="border border-accent shadow-md">
+    <table class="shadow-md">
         <slot></slot>
     </table>
 </template>
