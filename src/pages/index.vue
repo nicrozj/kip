@@ -14,7 +14,7 @@ import UPage from '@/components/UPage.vue';
         <UH1>Фото и видеокамеры</UH1>
         <h2 class="text-2xl text-accent">3ИСИП-722</h2>
       </div>
-      <section class="flex flex-col gap-2 w-full max-w-[1000px] px-10">
+      <section class="flex flex-col gap-2 w-full max-w-[1000px] px-5">
         <div class="flex flex-col gap-2 w-full">
           <h1 class="text-xl">Лабораторные работы</h1>
           <LinkButton href="/laboratory_work/1">

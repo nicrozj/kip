@@ -1,6 +1,6 @@
 <template>
-    <header class="h-16 bg-smoke-100 px-20 flex items-center mx-auto w-full justify-between">
+    <header class="h-16 bg-smoke-100 px-5 md:px-10 lg:px-20 flex items-center mx-auto w-full justify-between">
         <a href="/">Отчеты и работы</a>
-        <h1 class="flex gap-4">Жоркин Игорь Дмитриевич <span class="text-gray-400">|</span><span class="text-gray-400">3ИСИП-722</span></h1>
+        <h1 class="text-gray-400">Жоркин И. Д.</h1>
     </header>
 </template>
