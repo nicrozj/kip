@@ -12,6 +12,33 @@ import { ref } from 'vue';
 import UModal from '@/components/UModal.vue';
 
 const showModal = ref(false);
+const imagePath = ref("");
+
+const image = ref<HTMLImageElement | null>(null);
+
+const onMouseMove = (event: MouseEvent) => {
+    const container = event.currentTarget as HTMLElement;
+
+    if (image.value && container) {
+        const rect = container.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+        image.value.style.transformOrigin = `${x}% ${y}%`;
+        image.value.style.transform = 'scale(3)';
+    }
+};
+
+const onMouseLeave = () => {
+    if (image.value) {
+        image.value.style.transform = 'scale(1)';
+    }
+};
+
+let openModalWithImg = (path: string) => {
+    imagePath.value = path;
+    showModal.value = true;
+}
 
 </script>
 <template>
@@ -20,31 +47,31 @@ const showModal = ref(false);
         <UMain>
             <section>
                 <div class="grid grid-cols-2 gap-4 w-full p-4 bg-white border border-smoke-200 rounded-lg">
-                    <UButton @click="showModal=!showModal">
+                    <UButton @click="openModalWithImg('cart/figma.png')">
                         <div class="flex items-center justify-between">
                             <span>Figma</span>
                             +
                         </div>
                     </UButton>
-                    <UButton @click="showModal = !showModal">
+                    <UButton @click="openModalWithImg('cart/uml_ozon.png')">
                         <div class="flex items-center justify-between">
                             <span>Ozon</span>
                             +
                         </div>
                     </UButton>
-                    <UButton @click="showModal = !showModal">
+                    <UButton @click="openModalWithImg('cart/uml_aliexpress.png')">
                         <div class="flex items-center justify-between">
                             <span>Aliexpress</span>
                             +
                         </div>
                     </UButton>
-                    <UButton @click="showModal = !showModal">
+                    <UButton @click="openModalWithImg('cart/uml_wb.png')">
                         <div class="flex items-center justify-between">
                             <span>Wildberries</span>
                             +
                         </div>
                     </UButton>
-                    <UButton @click="showModal = !showModal">
+                    <UButton @click="openModalWithImg('cart/uml.png')">
                         <div class="flex items-center justify-between">
                             <span>UML</span>
                             +
@@ -56,9 +83,10 @@ const showModal = ref(false);
     </UPage>
     <UModal v-model="showModal">
         <div class="w-full h-full flex justify-center items-center">
-            <div
-                class="flex justify-center items-center w-4/5 h-4/5 rounded-lg overflow-hidden border border-smoke-200 shadow-md">
-                <img class="object-contain w-full h-full" src="/cart/figma.png" />
+            <div class="flex justify-center items-center w-3/5 h-4/5 rounded-lg overflow-hidden relative"
+                @mousemove="onMouseMove" @mouseleave="onMouseLeave">
+                <img ref="image" class="object-contain w-full h-full transition-transform duration-700"
+                    :src="imagePath" />
             </div>
         </div>
     </UModal>
