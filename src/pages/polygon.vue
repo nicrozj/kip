@@ -90,7 +90,7 @@ let openModalWithImg = (path: string) => {
         <div class="w-full h-full flex flex-col gap-2 justify-center items-center">
             <div class="flex justify-center items-center w-3/5 h-4/5 rounded-lg overflow-hidden relative border border-smoke-200"
                 @mousemove="onMouseMove" @mouseleave="onMouseLeave">
-                <img ref="image" class="object-contain w-full h-full transition-transform duration-700"
+                <img ref="image" class="object-contain w-3/4 h-3/4 transition-transform duration-700"
                     :src="imagePath" />
             </div>
         </div>
