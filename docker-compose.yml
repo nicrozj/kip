@@ -5,6 +5,9 @@ services:
     image: ghcr.io/nicrozj/kip-proxy:latest
     networks:
       - docker_network
+    ports:
+      - 8080:80
+      - 8443:443
     volumes:
       - ./data/caddy:/data/caddy
       
