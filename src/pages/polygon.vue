@@ -46,6 +46,7 @@ let openModalWithImg = (path: string) => {
         <UHeader />
         <UMain>
             <section class="flex flex-col gap-2">
+                <a href="https://shop.zhorkinigor.ru/" class="text-3xl hover:text-accent/50 transition-all">Ссылка на сайт</a>
                 <UH1>Корзина</UH1>
                 <div class="flex flex-col w-full p-4 bg-white border border-smoke-200 rounded-lg gap-4">
                     <div class="grid grid-cols-2 gap-4 ">
@@ -80,8 +81,10 @@ let openModalWithImg = (path: string) => {
                             </div>
                         </UButton>
                     </div>
-                    <a class="text-accent hover:text-black transition-all"
-                        href="https://disk.yandex.ru/i/LyUJ6qOu92cMlg">Ссылка на отчет</a>
+                    <div class="flex gap-3">
+                        <a class="text-accent hover:text-black transition-all"
+                            href="https://disk.yandex.ru/i/LyUJ6qOu92cMlg">Ссылка на отчет</a>
+                    </div>
                 </div>
             </section>
         </UMain>
