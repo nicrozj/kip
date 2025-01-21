@@ -1,4 +1,4 @@
-kip.zhorkinigor.ru {
+http://kip.zhorkinigor.ru {
     root * /web/kip
     try_files {path} index.html
     file_server
