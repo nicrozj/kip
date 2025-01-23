@@ -21,8 +21,8 @@ import UPage from '@/components/UPage.vue';
           </LinkButton>
         </div>
         <div class="flex flex-col gap-2 w-full">
-          <LinkButton href="/">
-            ---
+          <LinkButton href="/laboratories">
+            Лабораторные работы
           </LinkButton>
         </div>
         <div class="flex flex-col gap-2 w-full">
