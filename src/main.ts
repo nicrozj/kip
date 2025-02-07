@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 import { createRouter, createWebHistory, RouterView } from "vue-router";
-import Index from "./pages/index.vue";
-import Polygon from "./pages/polygon.vue";
-import Laboratories from "./pages/laboratories/Laboratories.vue";
+import Index from "@/pages/index.vue";
+import Polygon from "@/pages/polygon.vue";
+import Laboratories from "@/pages/laboratories/Laboratories.vue";
 import Laboratory1 from "@/pages/laboratories/laboratory1/Laboratory1.vue";
 import Laboratory2 from "@/pages/laboratories/laboratory2/Laboratory2.vue";
 import Laboratory3 from "@/pages/laboratories/laboratory3/Laboratory3.vue";
