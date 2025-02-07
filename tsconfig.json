@@ -3,7 +3,7 @@
   "include": ["src/**/*", "src/**/*.vue"],
   "compilerOptions": {
     "composite": true,
-
+    "types": ["vue"],
     "paths": {
       "@/*": ["./src/*"]
     }
